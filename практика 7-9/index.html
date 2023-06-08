@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <style>
+    H1 {
+    font-size: 200%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #333366;}
+    TD {
+    font-size: 150%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #333366;}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="style.css">
+<script><!--
+function Complete1(){
+var idVhod = document.getElementById('idVhod');
+if(document.Sel3.Pwd.value==document.Sel3.Pwd1.value){
+alert("Вас зарегистрировали\nID="+document.Sel3.Id.value+"\nPassword="+document.Sel3.Pwd.value);
+idVhod.style.display = (idVhod.style.display == 'inline') ? '' : 'inline'
+localStorage.setItem('hide', 2);
+alert(localStorage.setItem('hide', idVhod.style.display));
+}
+
+
+
+else{
+alert("Ошибка при вводе пароля\nПопробуйте еще раз");
+}
+alert((localStorage.getItem('hide')));
+alert(document.Sel3.Id.value);
+if(localStorage.getItem('hide') == document.Sel3.Id.value) {
+    alert("Вас зарегистрировали настолько хорошо что вы есть базе");
+}
+}
+
+
+
+
+
+//-->
+</script>
+</head>
+
+<body  class="my-center-align" id="grad" style="color:white">
+
+<H1>Регистрация</H1>
+<FORM NAME="Sel3">
+
+    <TABLE class="table_center_by_css">
+        <TR><TD><B>Идентификатор:</B></TD>
+            <TD><INPUT NAME="Id" SIZE=30 onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Пароль:</B></TD>
+            <TD><INPUT TYPE="password" NAME="Pwd" SIZE=30 onFocus="this.select();"></TD></TR>
+        <TR><TD><B>Проверка пароля:</B></TD>
+            <TD><INPUT TYPE="password" NAME="Pwd1" SIZE=30 onFocus="this.select();"></TD></TR>
+    </TABLE>
+    <INPUT TYPE="button" VALUE="Зарегестрироваться" class="favorite styled" onClick="Complete1();">
+    <INPUT TYPE="reset" VALUE="Сброс" class="favorite styled2">
+</FORM>
+</body>
+
+</html>
